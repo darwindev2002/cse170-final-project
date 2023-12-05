@@ -49,14 +49,14 @@ body {
   width: fit-content;
   border: 10px solid #FFE8CD;
   border-radius: 10px;
-  padding: 2% 6% 2%;
+  padding: 8px 24px 8px;
   /* margin: 20px; */
   box-shadow: 2px 2px 5px;
   text-align: center;
   /* left: 48px;
   top: 19px; */
   color: #2C71D8;
-  font-size: 24px;
+  font-size: 1.3rem;
   font-family: "IBM Plex Sans Devanagari";
   font-weight: 600;
   line-height: 1.8rem;
