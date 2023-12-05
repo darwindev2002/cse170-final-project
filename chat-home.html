@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Main Forum - GoSports</title>
+  <link rel="stylesheet" href="./styles/main.css">
+  <link rel="stylesheet" href="./styles/forum-home.css">
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  <script src="./scripts/customElements.js"></script>
+  <script src="./scripts/forum.js"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Devanagari:wght@600&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <header class="chat-list-header">
+    <h1>Chats</h1>
+  </header>
+
+  <div id="chat-list" class="chat-list">
+    <a class="chat-item" href="./chat-thread.html?id=1">
+      <div class="avatar">🧑</div>
+      <div class="chat-info">
+        <h2 class="chat-title">Sam Wong</h2>
+        <p class="chat-preview">Hey, how's it going?</p>
+      </div>
+    </a>
+    <!-- More chat items -->
+    <div class="chat-item" href="./chat-thread.html?id=2">
+      <div class="avatar">🧑‍🦰</div>
+      <div class="chat-info">
+        <h2 class="chat-title">Alex Johnson</h2>
+        <p class="chat-preview">Wanna meet up for a run?</p>
+      </div>
+    </div>
+    <!-- Add as many chat items as you have chat threads -->
+  </div>
+
+  <nav class="bottom-nav">
+    <a href="./forum-home.html"><button class="nav-button">🏠</button></a>
+    <a href="./connect-home.html"><button class="nav-button">👥</button></a>
+    <a href="./chat-home.html"><button class="nav-button">💬</button></a>
+    <!-- <a href="./settings.html"><button class="nav-button">⚙️</button></a> -->
+  </nav>
+
+</body>
+
+</html>

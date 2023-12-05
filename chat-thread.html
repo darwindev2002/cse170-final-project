@@ -21,7 +21,7 @@
       <button class="back-button">←</button>
     </a>
     <h1>Sam Wong</h1>
-    <button class="options-button">•••</button>
+    <button class="options-button" onclick="addDummyFromThem()">•••</button>
   </header>
 
   <div id="chat-container" class="chat-container">
@@ -93,11 +93,10 @@
   </div>
 
   <footer class="chat-footer">
-    <input type="text" id="chat-message" placeholder="Type a message...">
-    <button id="send-button" onclick="addDummyFromMe()">➤</button>
+    <input type="text" id="chat-message" placeholder="Type a message..." onkeyup="updateBtn()">
+    <button id="send-button" onclick="addDummyFromMe()" disabled>➤</button>
   </footer>
 
-  <script src="script.js"></script>
 </body>
 
 </html>

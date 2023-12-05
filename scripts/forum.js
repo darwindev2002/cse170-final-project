@@ -22,6 +22,45 @@ function createPost() {
 });
 }
 
-function backHome() {
+function addDummyComment() {
 
+  let postContainer = document.getElementById('post-container');
+
+  let replyInput = document.getElementById('reply-input');
+  let replyText = replyInput.value.trim();
+
+  let replyUser = document.createElement("div");
+  replyUser.classList.add("post-user");
+  replyUser.innerHTML = "<span class=\"avatar\">🧑</span> Harry Chan • 1s";
+
+  let replyTextWrap = document.createElement("p");
+  replyTextWrap.innerText = replyText
+
+  let replyWrapper = document.createElement("div");
+  replyWrapper.classList.add("forum-post", "reply-post");
+
+  replyWrapper.append(replyUser, replyTextWrap);
+
+  postContainer.appendChild(replyWrapper);
+
+  window.scrollTo(0, document.body.scrollHeight);
+  replyInput.value = "";
+
+  updateBtn();
+}
+
+function updateBtn() {
+  let replyInput = document.getElementById('reply-input');
+  let replyText = replyInput.value.trim();
+
+  let sendBtn = document.getElementById("reply-button");
+  // let btnWrapper = document.getElementById("button-wrapper")
+
+  if (replyText.length > 0) {
+    sendBtn.disabled = null;
+    sendBtn.style.backgroundColor = "#2d90fa";
+  } else {
+    sendBtn.disabled = true;
+    sendBtn.style.backgroundColor = "#cccccc";
+  }
 }

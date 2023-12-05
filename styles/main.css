@@ -11,9 +11,18 @@ body {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 button {
   border: 0;
   background-color: transparent;
+}
+
+hr {
+  width: 70%;
+  border: 0;
+  color: gray;
+  height: 1px;
+  background-color: gray;
 }
