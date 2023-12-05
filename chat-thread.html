@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Main Forum - GoSports</title>
+  <link rel="stylesheet" href="./styles/main.css">
+  <link rel="stylesheet" href="./styles/chat-thread.css">
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  <script src="./scripts/customElements.js"></script>
+  <script src="./scripts/chat.js"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Devanagari:wght@600&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body onload="scrollToBottom()">
+  <header class="chat-header">
+    <a href="./chat-home.html">
+      <button class="back-button">←</button>
+    </a>
+    <h1>Sam Wong</h1>
+    <button class="options-button">•••</button>
+  </header>
+
+  <div id="chat-container" class="chat-container">
+    <!-- Chat messages will be added here dynamically -->
+    <div class="chat-message from-them">
+      <div class="avatar">🧑</div>
+      <div class="text">Hey how are you doing so far?</div>
+    </div>
+    <div class="chat-message from-me">
+      <div class="text">I'm doing well, thanks! What about you?</div>
+      <div class="avatar">🧑</div>
+    </div>
+    <div class="chat-message from-them">
+      <div class="avatar">🧑</div>
+      <div class="text">Wanna play basketball tonight?</div>
+    </div>
+    <div class="chat-message from-me">
+      <div class="text">Yeah sure, wanna do it at 8pm tonight?</div>
+      <div class="avatar">🧑</div>
+    </div>
+    <div class="chat-message from-them">
+      <div class="avatar">🧑</div>
+      <div class="text">Hey how are you doing so far?</div>
+    </div>
+    <div class="chat-message from-me">
+      <div class="text">I'm doing well, thanks! What about you?</div>
+      <div class="avatar">🧑</div>
+    </div>
+    <div class="chat-message from-them">
+      <div class="avatar">🧑</div>
+      <div class="text">Wanna play basketball tonight?</div>
+    </div>
+    <div class="chat-message from-me">
+      <div class="text">Yeah sure, wanna do it at 8pm tonight?</div>
+      <div class="avatar">🧑</div>
+    </div>
+    <div class="chat-message from-them">
+      <div class="avatar">🧑</div>
+      <div class="text">Hey how are you doing so far?</div>
+    </div>
+    <div class="chat-message from-me">
+      <div class="text">I'm doing well, thanks! What about you?</div>
+      <div class="avatar">🧑</div>
+    </div>
+    <div class="chat-message from-them">
+      <div class="avatar">🧑</div>
+      <div class="text">Wanna play basketball tonight?</div>
+    </div>
+    <div class="chat-message from-me">
+      <div class="text">Yeah sure, wanna do it at 8pm tonight?</div>
+      <div class="avatar">🧑</div>
+    </div>
+    <div class="chat-message from-them">
+      <div class="avatar">🧑</div>
+      <div class="text">Hey how are you doing so far?</div>
+    </div>
+    <div class="chat-message from-me">
+      <div class="text">I'm doing well, thanks! What about you?</div>
+      <div class="avatar">🧑</div>
+    </div>
+    <div class="chat-message from-them">
+      <div class="avatar">🧑</div>
+      <div class="text">Wanna play basketball tonight?</div>
+    </div>
+    <div class="chat-message from-me">
+      <div class="text">Yeah sure, wanna do it at 8pm tonight?</div>
+      <div class="avatar">🧑</div>
+    </div>
+  </div>
+
+  <footer class="chat-footer">
+    <input type="text" id="chat-message" placeholder="Type a message...">
+    <button id="send-button" onclick="addDummyFromMe()">➤</button>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

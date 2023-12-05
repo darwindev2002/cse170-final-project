@@ -1,0 +1,65 @@
+body {
+  background-color: #FFB961;
+}
+
+.head-1 {
+  color: #FFFFFF;
+  font-size: 2rem;
+  font-family: "IBM Plex Sans Devanagari";
+  font-weight: 600;
+  line-height: 45px;
+  text-shadow: 2px 2px 3px #0000002d;
+  word-wrap: break-word;
+  padding: 40% 0 0 0;
+  text-align: center;
+}
+
+.head-2 {
+  color: #80B3FF;
+  font-size: 3rem;
+  font-family: "IBM Plex Sans Devanagari";
+  font-weight: 600;
+  line-height: 45px;
+  text-shadow: 2px 2px 3px #0000002d;
+  word-wrap: break-word;
+  padding: 0 0 0 0;
+  text-align: center;
+}
+
+.summary {
+  width: fit-content;
+  color: #FFFFFF;
+  font-size: 1rem;
+  font-family: "Istok Web";
+  font-weight: 400;
+  line-height: 25px;
+  text-shadow: 2px 2px 4px #0000000c;
+  word-wrap: break-word;
+  padding: 8% 7% 0;
+  margin: 0 auto 0;
+}
+
+.signup-wrapper {
+  text-align: center;
+  margin: 30% 0% 0%;
+}
+
+.start-signup {
+  background-color: #FFE8CD;
+  width: fit-content;
+  border: 10px solid #FFE8CD;
+  border-radius: 10px;
+  padding: 2% 6% 2%;
+  /* margin: 20px; */
+  box-shadow: 2px 2px 5px;
+  text-align: center;
+  /* left: 48px;
+  top: 19px; */
+  color: #2C71D8;
+  font-size: 24px;
+  font-family: "IBM Plex Sans Devanagari";
+  font-weight: 600;
+  line-height: 1.8rem;
+  /* word-wrap: break-word" */
+
+}

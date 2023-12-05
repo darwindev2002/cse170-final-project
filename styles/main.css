@@ -1,0 +1,19 @@
+html,
+body {
+  max-width: 100%;
+  /* overflow-x: hidden; */
+}
+
+body {
+  background-color: #FFE8CD;
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: 0;
+  background-color: transparent;
+}
