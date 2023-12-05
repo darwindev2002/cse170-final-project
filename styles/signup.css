@@ -1,6 +1,6 @@
 body {
   background-color: #FFB961;
-  padding: 6% 4% 4%;
+  padding: 30px 20px 20px;
   font-size: 0.9rem;
   font-family: 'Source Serif 4', serif;
   font-weight: 600;
@@ -16,12 +16,9 @@ back-arrow {
   background-color: #F9D9AC;
   border: 0px;
   border-radius: 12px;
-  padding: 8% 8% 1.5%;
-  margin-top: 4%;
+  padding: 20px 20px 15px;
+  margin-top: 20px;
 }
-
-
-
 
 label {
   /* width: 90%; */
