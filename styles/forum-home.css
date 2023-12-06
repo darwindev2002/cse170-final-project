@@ -119,6 +119,14 @@ header h1 {
   line-height: 0.7rem;
 }
 
+.menu-items p {
+  display: flex;
+}
+
+.trash-btn {
+  font-size: 1rem;
+}
+
 .menu-section h2 {
   margin-left: 10px;
   font-size: 1.1em;

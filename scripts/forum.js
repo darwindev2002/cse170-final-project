@@ -87,41 +87,64 @@ function editFilter(mode) {
     let newLocation = locationInput.value;
     locationInput.parentNode.replaceWith(createFilterItem(0, newLocation));
 
-  } else if (mode == 1 && !isEditing) {
+  } else if ((mode == 1 || mode == 2) && !isEditing) {
 
-    // Edit "interested sports"
-    let currentSports = menuSection.getElementsByClassName("filter-item");
-    for (sport of currentSports) {
-      sport.parentNode.replaceWith(createInputBox(sport.innerText));
+    // Edit "interested sports/cities"
+    console.log("here")
+    let currentItems = menuSection.querySelectorAll(".filter-item");
+    for (item of currentItems) {
+      if (item.innerText.trim().length > 0) {
+        item.parentNode.replaceWith(createInputBox(item.innerText.trim()));
+      } else {
+        item.parentNode.remove();
+      }
     }
-    menuSection.getElementsByClassName("menu-items")[0].appendChild(createAddMoreBtn());
+    if (currentItems.length != 5) {
+      menuSection.getElementsByClassName("menu-items")[0].appendChild(createAddMoreBtn());
+    }
 
-  } else if (mode == 1 && isEditing) {
+  } else if ((mode == 1 || mode == 2) && isEditing) {
 
     // Save "interested sports"
-    let sportInputs = menuSection.getElementsByClassName("filter-item");
-    for (sport of sportInputs) {
-      sport.parentNode.replaceWith(createFilterItem(1, sport.value));
+    let itemInputs = menuSection.querySelectorAll(".filter-item");
+    for (item of itemInputs) {
+      if (item.value.trim().length > 0) {
+        item.parentNode.replaceWith(createFilterItem(1, item.value.trim()));
+      } else {
+        item.parentNode.remove();
+      }
+      // item.parentNode.replaceWith(createFilterItem(1, item.value));
     }
-    menuSection.getElementsByClassName("add-more-wrapper")[0].remove();
-
-  } else if (mode == 2) {
-    // Edit "interested cities"
+    menuSection.getElementsByClassName("add-more-wrapper")[0]?.remove();
 
   } else {
     // Do nothing
   }
 
   editButton.innerText = isEditing ? "✏️" : "✅";
-
   
 }
 
 function createAddMoreBtn(){
-  let btn = document.createElement("p");
-  btn.classList.add("add-more-wrapper");
-  btn.innerHTML = `<button class="add-more">Add More</button>`;
-  return btn;
+  let btnWrapper = document.createElement("p");
+  btnWrapper.classList.add("add-more-wrapper");
+
+  let btn = document.createElement("button");
+  btn.classList.add("add-more");
+  btn.innerText = "Add More";
+  btn.addEventListener("click", function() {
+    if (this.parentNode.parentNode.childElementCount == 5) {
+      // must this.parentElement.parentElement.lastElementChild.classList.contains("add-more-wrapper")
+      this.parentNode.replaceWith(createInputBox(""));
+    } else {
+        this.parentNode.parentNode.insertBefore(createInputBox(""), this.parentNode.parentNode.lastChild);
+    }
+  });
+
+  btnWrapper.appendChild(btn);
+
+  // btnWrapper.innerHTML = `<button class="add-more">Add More</button>`;
+  return btnWrapper;
 }
 
 
@@ -138,7 +161,24 @@ function createInputBox(text) {
   inputElem.type = "text";
   inputElem.value = text;
 
-  inputWrapper.appendChild(inputElem);
+  let trash = document.createElement("button");
+  trash.classList.add("trash-btn")
+  trash.innerText = "❌"
+  trash.addEventListener("click", function() {
+    if (this.parentNode.parentNode.childElementCount == 5) {
+      console.log(this.parentElement.parentElement.lastChild.classList)
+      if (this.parentElement.parentElement.lastChild.classList.contains("add-more-wrapper")) {
+        this.parentNode.remove();
+      } else {
+        this.parentNode.parentNode.appendChild(createAddMoreBtn());
+        this.parentNode.remove()
+      }
+    } else {
+      this.parentNode.remove();
+    }
+  });
+
+  inputWrapper.append(inputElem, trash);
 
   return inputWrapper;
 }
@@ -155,7 +195,7 @@ function createFilterItem(mode, text) {
   itemSpan.classList.add("filter-item");
   itemSpan.innerText = text;
 
-  itemWrapper.innerText = (mode != 1) ? "📍 " : "🏀 ";
+  itemWrapper.innerHTML = (mode != 1) ? '📍&nbsp;' : '🏀&nbsp;';
   itemWrapper.appendChild(itemSpan)
 
   return itemWrapper;
