@@ -1,0 +1,129 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f7f7f7;
+}
+
+.search-header {
+  background-color: #ffd28e;
+  padding: 15px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+#search-input {
+  flex-grow: 1;
+  padding: 14px 12px;
+  margin-right: 10px;
+  /* border: 1px solid #ccc; */
+  border: none;
+  border-radius: 15px;
+}
+
+#search-button {
+  padding: 6px 9px;
+  /* background-color: none; */
+  /* background-color: #007bff; */
+  /* color: white; */
+  border: 1px solid white;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  margin-right: 15px;
+}
+
+#back-button {
+  padding: 7px 9px;
+  /* background-color: none; */
+  /* background-color: #007bff; */
+  /* color: white; */
+  border: 1px solid white;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  margin-right: 10px;
+  margin-left: 15px;
+
+}
+
+.search-results {
+  margin-top: 70px;
+  padding: 15px;
+}
+
+/* Style for individual search result items */
+.search-result-item {
+  /* background-color: white; */
+  border-radius: 5px;
+  padding: 10px 10px 3px 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.search-result-item:hover {
+  background-color: #e9ecef;
+}
+
+/* Style for search result items */
+.forum-posts,
+.connect-posts,
+.chat-list {
+  margin: 70px 0;
+  padding: 0px 10px 10px;
+}
+
+.forum-post,
+.connect-post {
+  background-color: #C6E59C;
+  border-radius: 10px;
+  padding: 10px;
+  /* margin: 10px 0; */
+  display: flex;
+  align-items: flex-start;
+}
+
+.connect-post {
+  background-color: #bae9fa;
+}
+
+.post-content h2 {
+  margin-block: 0;
+  font-size: 1rem;
+}
+
+.post-content p {
+  margin-block: 0.3rem;
+  font-size: 0.8rem;
+  line-height: 0.9rem;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.avatar {
+  font-size: 1.6em;
+  margin-right: 10px;
+}
+
+.tags {
+  display: flex;
+  margin-top: 10px;
+}
+
+.tag {
+  background-color: #e1ecf4;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-right: 5px;
+  font-size: 0.8em;
+}

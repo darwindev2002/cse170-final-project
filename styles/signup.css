@@ -30,7 +30,7 @@ label {
 input {
   background-color: #FBE7CA;
   width: 90%;
-  padding: 4% 6%;
+  padding: 16px 0px 16px 24px;
   margin: 0.4rem 0% 1.3rem;
   border: 0px;
   border-radius: 5px;
@@ -42,7 +42,7 @@ input {
 }
 
 .btn-submit {
-  padding: 3.5% 14% 3.5%;
+  padding: 7px 28px 7px;
   border: 0px;
   border-radius: 10px;
   font-size: 1.2rem;

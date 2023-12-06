@@ -111,6 +111,7 @@ header h1 {
 .edit-btn {
   padding-right: 13px;
   float: right;
+  font-size: 1rem;
 }
 
 .menu-items {
@@ -127,6 +128,23 @@ header h1 {
   margin-left: 20px;
   font-size: 1em;
 }
+
+/* Style for hidden filter menu */
+
+.add-more {
+  border-radius: 10px;
+  border: 1px dashed #aaa;
+  padding: 3px 5px;
+}
+
+.menu-section p input {
+  /* background-color: transparent; */
+  border: 1px solid #666;
+  border-radius: 10px;
+  padding: 5px 8px;
+}
+
+/* Style for thread list */
 
 .forum-posts,
 .connect-posts,

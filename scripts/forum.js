@@ -64,3 +64,99 @@ function updateBtn() {
     sendBtn.style.backgroundColor = "#cccccc";
   }
 }
+
+function editFilter(mode) {
+
+  let menuSection = document.getElementsByClassName("menu-section")[mode];
+  let editButton = document.getElementsByClassName("edit-btn")[mode];
+  
+  // If editing, a tick is displayed to confirm changes
+  let isEditing = editButton.innerText == "✅";
+
+  if (mode == 0 && !isEditing) {
+
+    // Edit "your location"
+    let currentLocation = menuSection.getElementsByClassName("filter-item")[0];
+    let currentLocationText = currentLocation.innerText;
+    currentLocation.parentNode.replaceWith(createInputBox(currentLocationText));
+
+  } else if (mode == 0 && isEditing) {
+
+    // Save "your location"
+    let locationInput = menuSection.getElementsByClassName("filter-item")[0]
+    let newLocation = locationInput.value;
+    locationInput.parentNode.replaceWith(createFilterItem(0, newLocation));
+
+  } else if (mode == 1 && !isEditing) {
+
+    // Edit "interested sports"
+    let currentSports = menuSection.getElementsByClassName("filter-item");
+    for (sport of currentSports) {
+      sport.parentNode.replaceWith(createInputBox(sport.innerText));
+    }
+    menuSection.getElementsByClassName("menu-items")[0].appendChild(createAddMoreBtn());
+
+  } else if (mode == 1 && isEditing) {
+
+    // Save "interested sports"
+    let sportInputs = menuSection.getElementsByClassName("filter-item");
+    for (sport of sportInputs) {
+      sport.parentNode.replaceWith(createFilterItem(1, sport.value));
+    }
+    menuSection.getElementsByClassName("add-more-wrapper")[0].remove();
+
+  } else if (mode == 2) {
+    // Edit "interested cities"
+
+  } else {
+    // Do nothing
+  }
+
+  editButton.innerText = isEditing ? "✏️" : "✅";
+
+  
+}
+
+function createAddMoreBtn(){
+  let btn = document.createElement("p");
+  btn.classList.add("add-more-wrapper");
+  btn.innerHTML = `<button class="add-more">Add More</button>`;
+  return btn;
+}
+
+
+function createInputBox(text) {
+  /*
+    <p>
+      <input type="text" value="dummy">
+    </p>
+  */
+  let inputWrapper = document.createElement("p");
+
+  let inputElem = document.createElement("input");
+  inputElem.classList.add("filter-item");
+  inputElem.type = "text";
+  inputElem.value = text;
+
+  inputWrapper.appendChild(inputElem);
+
+  return inputWrapper;
+}
+
+function createFilterItem(mode, text) {
+  /*
+    <p>
+      📍 <span class="filter-item">San Diego</span>
+    </p>
+  */
+  let itemWrapper = document.createElement("p");
+
+  let itemSpan = document.createElement("span");
+  itemSpan.classList.add("filter-item");
+  itemSpan.innerText = text;
+
+  itemWrapper.innerText = (mode != 1) ? "📍 " : "🏀 ";
+  itemWrapper.appendChild(itemSpan)
+
+  return itemWrapper;
+}
