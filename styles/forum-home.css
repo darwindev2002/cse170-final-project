@@ -92,19 +92,22 @@ header h1 {
   background-color: #fff5d9;
   transform: translateX(-250px);
   transition: transform 0.3s ease;
+  overflow-x: hidden;
+  overflow-x: auto;
 }
+
 
 .menu.open {
   transform: translateX(0);
 }
 
 .menu-section {
-  padding-bottom: 10px;
+  padding-bottom: 0px;
 }
 
 .menu-header {
   height: fit-content;
-  padding: 3px 10px 3px;
+  padding: 0px 10px 0px;
   background-color: #fdae2e;
   color: white;
   display: flex;
@@ -125,6 +128,12 @@ header h1 {
 
 .menu-items p {
   display: flex;
+  line-height: 0.75rem;
+}
+
+.menu-items p.editing {
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 
 .trash-btn {
@@ -169,7 +178,7 @@ header h1 {
 
 .forum-post,
 .connect-post {
-  background-color: #acff8c;
+  background-color: #b7ff9c;
   border-radius: 10px;
   padding: 15px 15px 7px;
   margin: 10px 0 16px;
@@ -181,6 +190,12 @@ header h1 {
   background-color: #aee9ff;
 }
 
+
+.post-content {
+  width: 100%;
+}
+
+
 .post-content h2 {
   margin-block: 0;
   font-size: 1rem;
@@ -189,7 +204,7 @@ header h1 {
 .post-content p {
   margin-block: 0.3rem;
   font-size: 0.8rem;
-  line-height: 0.9rem;
+  line-height: 1rem;
 
   overflow: hidden;
   text-overflow: ellipsis;
@@ -314,6 +329,6 @@ header h1 {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
 }

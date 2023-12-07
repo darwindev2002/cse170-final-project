@@ -355,6 +355,7 @@ function createInputBox(text) {
     </p>
   */
   let inputWrapper = document.createElement("p");
+  inputWrapper.classList.add("editing")
 
   let inputElem = document.createElement("input");
   inputElem.classList.add("filter-item");
@@ -390,6 +391,7 @@ function createFilterItem(mode, text) {
     </p>
   */
   let itemWrapper = document.createElement("p");
+  itemWrapper.classList.add("edited")
 
   let itemSpan = document.createElement("span");
   itemSpan.classList.add("filter-item");
@@ -401,5 +403,6 @@ function createFilterItem(mode, text) {
   return itemWrapper;
 }
 
-
-loadPosts(window.location.href.endsWith("forum-home.html") ? 0 : 1);
+if (window.location.href.endsWith("home.html")) {
+  loadPosts(window.location.href.endsWith("forum-home.html") ? 0 : 1);
+}

@@ -74,7 +74,7 @@ header h1 {
 
 .post-container {
   margin: 70px 0px;
-  padding: 0 15px 10px;
+  padding: 3px 22px 12px;
 }
 
 .forum-post {
@@ -86,7 +86,7 @@ header h1 {
 
 .main-post {
   margin-top: 10px;
-  background-color: #acff8c;
+  background-color: #b7ff9c;
 }
 
 .connect-post {
@@ -137,7 +137,7 @@ header h1 {
 }
 
 .tag {
-  background-color: #e1ecf4;
+  background-color: #f3faff;
   border-radius: 5px;
   padding: 5px 10px;
   margin-right: 5px;

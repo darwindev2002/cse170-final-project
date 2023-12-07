@@ -66,7 +66,7 @@ function updateBtn() {
 
   if (replyText.length > 0) {
     sendBtn.disabled = null;
-    sendBtn.style.backgroundColor = "#2d90fa";
+    sendBtn.style.backgroundColor = "#1c8aff";
   } else {
     sendBtn.disabled = true;
     sendBtn.style.backgroundColor = "#cccccc";

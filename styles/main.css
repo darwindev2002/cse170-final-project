@@ -26,3 +26,7 @@ hr {
   height: 1px;
   background-color: gray;
 }
+
+p {
+  line-height: 1.15rem;
+}
