@@ -18,7 +18,7 @@ html {
 
 
 header {
-  background-color: #ffd28e;
+  background-color: #ffc46a;
   padding: 10px 0px 10px;
   display: flex;
   justify-content: space-between;
@@ -86,11 +86,11 @@ header h1 {
 
 .main-post {
   margin-top: 10px;
-  background-color: #C6E59C;
+  background-color: #acff8c;
 }
 
 .connect-post {
-  background-color: #bae9fa;
+  background-color: #aee9ff;
 }
 
 .main-post h2 {
@@ -105,7 +105,7 @@ header h1 {
 }
 
 .reply-post {
-  background-color: #e9ecef;
+  background-color: #fdfdfd;
 }
 
 .reply-post p {

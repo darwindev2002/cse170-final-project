@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
-  background-color: #f0f0f0;
+  background-color: #fffcf6;
 
   /* for Internet Explorer, Edge */
   -ms-overflow-style: none;
@@ -18,13 +18,17 @@ body::-webkit-scrollbar {
 header,
 .bottom-nav,
 .chat-list-header {
-  background-color: #ffd28e;
-  padding: 10px 0px 10px;
+  background-color: #ffc46a;
+  padding: 10px 0px 2px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: fixed;
   width: 100%;
+}
+
+.bottom-nav {
+  padding: 10px 0px 10px;
 }
 
 header,
@@ -33,7 +37,7 @@ header,
 }
 
 header h1 {
-  font-size: 1.2em;
+  font-size: 1.5rem;
   /* color: #80B3FF; */
   font-family: "IBM Plex Sans Devanagari";
   font-weight: 600;
@@ -82,10 +86,10 @@ header h1 {
 
 .menu {
   position: fixed;
-  top: 61px;
+  top: 60px;
   max-width: 250px;
   height: 100%;
-  background-color: #ffd28e;
+  background-color: #fff5d9;
   transform: translateX(-250px);
   transition: transform 0.3s ease;
 }
@@ -129,11 +133,13 @@ header h1 {
 
 .menu-section h2 {
   margin-left: 10px;
-  font-size: 1.1em;
+  padding-top: 4px;
+  font-size: 0.95em;
 }
 
 .menu-section p {
   margin-left: 20px;
+  margin-right: 8px;
   font-size: 1em;
 }
 
@@ -157,22 +163,22 @@ header h1 {
 .forum-posts,
 .connect-posts,
 .chat-list {
-  margin: 70px 0;
+  margin: 80px 8px 50px;
   padding: 0px 10px 10px;
 }
 
 .forum-post,
 .connect-post {
-  background-color: #C6E59C;
+  background-color: #acff8c;
   border-radius: 10px;
-  padding: 10px;
-  margin: 10px 0;
+  padding: 15px 15px 7px;
+  margin: 10px 0 16px;
   display: flex;
   align-items: flex-start;
 }
 
 .connect-post {
-  background-color: #bae9fa;
+  background-color: #aee9ff;
 }
 
 .post-content h2 {
@@ -197,17 +203,25 @@ header h1 {
   margin-right: 10px;
 }
 
+.post-content-breakline {
+  width: 100%;
+  background-color: #bbb;
+}
+
 .tags {
   display: flex;
   margin-top: 10px;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 
 .tag {
-  background-color: #e1ecf4;
+  background-color: #f3faff;
   border-radius: 5px;
   padding: 5px 10px;
   margin-right: 5px;
   font-size: 0.8em;
+  margin-bottom: 5px;
 }
 
 /* 
@@ -258,7 +272,7 @@ header h1 {
 
 /* Chat home css */
 .chat-list-header {
-  background-color: #ffd28e;
+  background-color: #ffc46a;
   /* padding: 15px; */
   text-align: center;
   justify-content: center;
@@ -272,7 +286,7 @@ header h1 {
   display: flex;
   align-items: center;
   padding: 10px;
-  background-color: white;
+  background-color: #faef9d;
   margin-bottom: 10px;
   border-radius: 5px;
   cursor: pointer;
