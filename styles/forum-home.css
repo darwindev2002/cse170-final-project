@@ -50,7 +50,7 @@ header h1 {
 
 
 .chat-list-header h1 {
-  font-size: 1.2em;
+  font-size: 1.5em;
   /* color: #80B3FF; */
   font-family: "IBM Plex Sans Devanagari";
   font-weight: 600;
@@ -94,6 +94,8 @@ header h1 {
   transition: transform 0.3s ease;
   overflow-x: hidden;
   overflow-x: auto;
+  border-right: 2px solid #ddd;
+  box-shadow: #ddd 2px 0px 3px;
 }
 
 
@@ -108,15 +110,15 @@ header h1 {
 .menu-header {
   height: fit-content;
   padding: 0px 10px 0px;
-  background-color: #fdae2e;
-  color: white;
+  background-color: #fff9f2;
+  color: black;
   display: flex;
   justify-content: space-between;
   line-height: 1.3rem;
 }
 
 .edit-btn {
-  padding-right: 13px;
+  padding-right: 6px;
   float: right;
   font-size: 1rem;
 }
@@ -184,6 +186,8 @@ header h1 {
   margin: 10px 0 16px;
   display: flex;
   align-items: flex-start;
+  border: 2px solid #eee;
+  box-shadow: #eee 4px 4px;
 }
 
 .connect-post {

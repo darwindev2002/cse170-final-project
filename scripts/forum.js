@@ -163,7 +163,7 @@ function loadPosts(mode) {
 
 function createThreadElement(thread, mode) {
   let wrapper1 = document.createElement("a");
-  wrapper1.href = mode == 0 ? "./forum-thread.html" : "connect-post.html";
+  wrapper1.href = mode == 0 ? "./forum-thread.html" : "connect-thread.html";
 
   let wrapper2 = document.createElement("div");
   wrapper2.classList.add(mode == 0 ? "forum-post" : "connect-post");
@@ -290,7 +290,6 @@ function editFilter(mode) {
   } else if ((mode == 1 || mode == 2) && !isEditing) {
 
     // Edit "interested sports/cities"
-    console.log("here")
     let currentItems = menuSection.querySelectorAll(".filter-item");
     for (item of currentItems) {
       if (item.innerText.trim().length > 0) {
