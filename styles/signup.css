@@ -13,7 +13,7 @@ back-arrow {
 }
 
 .signup-form {
-  background-color: #F9D9AC;
+  background-color: #fff5d9;
   border: 0px;
   border-radius: 12px;
   padding: 20px 20px 15px;
@@ -28,7 +28,7 @@ label {
 }
 
 input {
-  background-color: #FBE7CA;
+  /* background-color: #FBE7CA; */
   width: 90%;
   padding: 16px 0px 16px 24px;
   margin: 0.4rem 0% 1.3rem;
@@ -49,5 +49,5 @@ input {
   word-wrap: break-word;
   font-weight: 600;
   font-family: "IBM Plex Sans Devanagari";
-  background-color: #FBE7CA;
+  background-color: #fff5d9;
 }

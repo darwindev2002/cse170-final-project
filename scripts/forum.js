@@ -308,7 +308,7 @@ function editFilter(mode) {
     let itemInputs = menuSection.querySelectorAll(".filter-item");
     for (item of itemInputs) {
       if (item.value.trim().length > 0) {
-        item.parentNode.replaceWith(createFilterItem(1, item.value.trim()));
+        item.parentNode.replaceWith(createFilterItem(mode, item.value.trim()));
       } else {
         item.parentNode.remove();
       }
@@ -395,6 +395,8 @@ function createFilterItem(mode, text) {
   let itemSpan = document.createElement("span");
   itemSpan.classList.add("filter-item");
   itemSpan.innerText = text;
+
+  console.log(mode)
 
   itemWrapper.innerHTML = (mode != 1) ? '📍&nbsp;' : '🏀&nbsp;';
   itemWrapper.appendChild(itemSpan)
